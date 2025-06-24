@@ -1,0 +1,16 @@
+services:
+  db:
+    container_name: postgres-spring-boot
+    image: postgres:13  # Usar versión específica, no latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: pwd
+      POSTGRES_DB: pgdb
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # Ruta estándar
+    ports:
+      - "5332:5432"
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
