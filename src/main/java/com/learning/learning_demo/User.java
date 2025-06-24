@@ -1,8 +1,14 @@
 package com.learning.learning_demo;
 
-import java.util.Objects;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+import java.util.Objects;
+@Entity
+@Table(name = "users")  // ← Cambiar a plural
 public class User {
+    @Id
     private Integer id;
     private String name;
     private String TechStack;

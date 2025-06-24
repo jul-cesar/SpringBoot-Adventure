@@ -12,9 +12,6 @@ public class LearningDemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(LearningDemoApplication.class, args);
 	}
-	@GetMapping
-	public String helloWorld() {
-		return "Hello world";
-	}
+
 
 }
